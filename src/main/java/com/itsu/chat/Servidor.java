@@ -25,40 +25,39 @@ public class Servidor extends javax.swing.JFrame {
      */
     private ServerSocket server;
     private final int PUERTOH = 1000;
-    private static Conexion fireBase = new Conexion();
+    private Conexion firebaseConexion;
     private FileHelper fhelper;
 
     public Servidor() {
-        initComponents();
+        firebaseConexion = new Conexion();
         try {
-            fireBase.conectar();
-            System.out.println("Conectado...");
-        } catch (IOException ex) {
-            Logger.getLogger(FileHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        fhelper = new FileHelper("Servidor JFrame");
-        this.fhelper.escribir("Servidor iniciado");
-
-        try {
-            server = new ServerSocket(PUERTOH);
-            mensajeria("*.:Servidor Conectado:.\n");
-            super.setVisible(true);
-
-            while (true) {
-                Socket cliente = server.accept();
-                mensajeria("Cliente conectado desde la dirección: " + cliente.getInetAddress().getHostAddress());
-
-                DataInputStream entrada = new DataInputStream(cliente.getInputStream());
-
-                HiloServidor hilo = new HiloServidor(cliente, entrada.readUTF(), this);
-                hilo.start();
+            firebaseConexion.conectar();
+            initComponents();
+            fhelper = new FileHelper("Servidor JFrame");
+            this.fhelper.escribir("Servidor iniciado");
+            try {
+                server = new ServerSocket(PUERTOH);
+                mensajeria("*.:Servidor Conectado:.\n");
+                super.setVisible(true);
+                
+                while (true) {
+                    Socket cliente = server.accept();
+                    mensajeria("Cliente conectado desde la dirección: " + cliente.getInetAddress().getHostAddress());
+                    
+                    DataInputStream entrada = new DataInputStream(cliente.getInputStream());
+                    
+                    HiloServidor hilo = new HiloServidor(cliente, entrada.readUTF(), this);
+                    hilo.start();
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this, e.toString());
+                fhelper.escribir(e.getMessage());
             }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.toString());
-            fhelper.escribir(e.getMessage());
+            fhelper.escribir("Servidor Finalizado");
+        } catch (IOException ex) {
+            Logger.getLogger(Servidor.class.getName()).log(Level.SEVERE, null,ex);
+            fhelper.escribir(ex.getMessage());
         }
-
-        fhelper.escribir("Servidor Finalizado");
     }
 
     /**

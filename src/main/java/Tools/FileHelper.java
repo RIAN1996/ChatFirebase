@@ -16,16 +16,17 @@ import java.util.logging.Logger;
  * @author Edgerard
  */
 public class FileHelper {
-
+    
     private String fileName = "Log File.txt";
     private String srcMesagge = "FileHelper";
     //Firebase
-    private Conexion fireBase;
+    private Conexion fireAdd;
     private Map<String, Object> data = new HashMap<>();
     private String uidd = "";
-    private int bandera = 0;
-
+    
     public FileHelper(String remitente) {
+        fireAdd = new Conexion();
+        
         try {
             File myObj = new File(fileName);
             if (myObj.createNewFile()) {
@@ -38,34 +39,38 @@ public class FileHelper {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
+        
         this.srcMesagge = remitente;
     }
-
+    
     public void escribir(String log) {
         try {
             FileWriter fileWriter = new FileWriter(fileName, true);
-
+            
             Timestamp timeStamp = new Timestamp(new Date().getTime());
             String temp = log + "	|	" + timeStamp;
             fileWriter.write(srcMesagge + "	:	" + temp + "\n\n");
-            fireBase = new Conexion();
             data.put("datos", temp);
-            uidd = srcMesagge + java.util.UUID.randomUUID().toString();
-            fireBase.add("logs", uidd, data);
+            uidd = srcMesagge + "_" + java.util.UUID.randomUUID().toString();
+            if (fireAdd.add("logs", uidd, data)) {
+                System.out.println("Logs agregados correctamente");
+            } else {
+                System.out.println("Error al agregar logs");
+            }
+
             //Coleccion : Logs
             // Documento : srcMesagge
             // datos : temp
             fileWriter.close();
-
+            
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
-
+        
     }
-
+    
     public void setSrc(String newSrc) {
         this.srcMesagge = newSrc;
     }

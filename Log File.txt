@@ -202,3 +202,87 @@ HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 00:25:21.
 
 HiloServidor	:	PedroxD se desconectó	|	2021-12-07 00:25:21.961
 
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:00:52.271
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-07 09:01:27.661
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-07 09:01:27.821
+
+Cliente Paola	:	java.lang.IllegalStateException: FirebaseApp name [DEFAULT] already exists!	|	2021-12-07 09:01:29.811
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:05:56.911
+
+Cliente dsd	:	java.lang.IllegalStateException: FirebaseApp name [DEFAULT] already exists!	|	2021-12-07 09:06:27.48
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:21:47.129
+
+HiloServidor	:	Se conectó lalo	|	2021-12-07 09:22:45.661
+
+HiloServidor	:	Se conectó Maria	|	2021-12-07 09:22:56.381
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:23:13.699
+
+HiloServidor	:	Maria se desconectó	|	2021-12-07 09:23:13.859
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:23:17.649
+
+HiloServidor	:	lalo se desconectó	|	2021-12-07 09:23:17.819
+
+Conexion Firebase Iniciada	:	Conexion con Firebase iniciada	|	2021-12-07 09:24:34.549
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:24:39.098
+
+Firebase conexion	:	Conexion con Firebase iniciada	|	2021-12-07 09:28:46.308
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:28:49.677
+
+HiloServidor	:	Se conectó jose	|	2021-12-07 09:29:07.178
+
+HiloServidor	:	Se conectó pedro	|	2021-12-07 09:29:25.571
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:29:57.57
+
+HiloServidor	:	pedro se desconectó	|	2021-12-07 09:29:57.733
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:30:03.541
+
+HiloServidor	:	jose se desconectó	|	2021-12-07 09:30:03.688
+
+Firebase conexion	:	Conexion con Firebase iniciada	|	2021-12-07 09:34:51.523
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:34:54.948
+
+HiloServidor	:	Se conectó jose	|	2021-12-07 09:35:24.283
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:38:28.538
+
+HiloServidor	:	jose se desconectó	|	2021-12-07 09:38:28.712
+
+Firebase conexion	:	Conexion con Firebase iniciada	|	2021-12-07 09:45:53.397
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 09:45:56.757
+
+HiloServidor	:	Se conectó lalo	|	2021-12-07 09:46:32.251
+
+HiloServidor	:	Se conectó pedro	|	2021-12-07 09:46:38.48
+
+HiloServidor	:	Se conectó marco	|	2021-12-07 09:47:07.755
+
+HiloServidor	:	Se conectó thor	|	2021-12-07 09:47:13.482
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:47:26.486
+
+HiloServidor	:	thor se desconectó	|	2021-12-07 09:47:26.648
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:47:29.263
+
+HiloServidor	:	pedro se desconectó	|	2021-12-07 09:47:29.401
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:47:32.063
+
+HiloServidor	:	marco se desconectó	|	2021-12-07 09:47:32.221
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 09:47:33.629
+
+HiloServidor	:	lalo se desconectó	|	2021-12-07 09:47:33.765
+
