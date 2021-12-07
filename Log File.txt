@@ -182,3 +182,23 @@ HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:48:01.
 
 HiloServidor	:	Marco se desconectó	|	2021-12-06 23:48:01.192
 
+Servidor JFrame	:	Servidor iniciado	|	2021-12-07 00:23:49.156
+
+HiloServidor	:	Se conectó Luisa	|	2021-12-07 00:24:15.262
+
+HiloServidor	:	Se conectó PedroxD	|	2021-12-07 00:24:48.162
+
+HiloServidor	:	Se conectó SpiderJr	|	2021-12-07 00:25:01.046
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 00:25:20.101
+
+HiloServidor	:	SpiderJr se desconectó	|	2021-12-07 00:25:20.885
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 00:25:21.136
+
+HiloServidor	:	Luisa se desconectó	|	2021-12-07 00:25:21.271
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-07 00:25:21.801
+
+HiloServidor	:	PedroxD se desconectó	|	2021-12-07 00:25:21.961
+

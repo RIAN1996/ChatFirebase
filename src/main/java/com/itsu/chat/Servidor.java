@@ -30,6 +30,12 @@ public class Servidor extends javax.swing.JFrame {
 
     public Servidor() {
         initComponents();
+        try {
+            fireBase.conectar();
+            System.out.println("Conectado...");
+        } catch (IOException ex) {
+            Logger.getLogger(FileHelper.class.getName()).log(Level.SEVERE, null, ex);
+        }
         fhelper = new FileHelper("Servidor JFrame");
         this.fhelper.escribir("Servidor iniciado");
 
@@ -50,13 +56,6 @@ public class Servidor extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.toString());
             fhelper.escribir(e.getMessage());
-        }
-
-        try {
-            fireBase.conectar();
-            System.out.println("Conectado...");
-        } catch (IOException ex) {
-            Logger.getLogger(FileHelper.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         fhelper.escribir("Servidor Finalizado");
