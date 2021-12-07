@@ -1,0 +1,184 @@
+FileHelper	:	Archivo Creado	|	2021-12-06 22:03:02.921
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:05:11.775
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:06:49.22
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:13:14.854
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:16:26.984
+
+HiloServidor	:	Se conectó sa	|	2021-12-06 22:16:55.078
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 22:17:02.904
+
+HiloServidor	:	sa se desconectó	|	2021-12-06 22:17:02.904
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:18:28.493
+
+HiloServidor	:	Se conectó sada	|	2021-12-06 22:18:47.224
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 22:18:57.314
+
+HiloServidor	:	sada se desconectó	|	2021-12-06 22:18:57.314
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:19:29.993
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:29:46.902
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:35:03.963
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:37:59.152
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:41:35.434
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:43:51.776
+
+HiloCliente	:	java.net.SocketException: Connection reset	|	2021-12-06 22:44:32.711
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:46:30.0
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:47:22.271
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:53:29.221
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 22:56:41.339
+
+HiloServidor	:	Se conectó asa	|	2021-12-06 22:56:56.895
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 22:57:21.99
+
+HiloServidor	:	asa se desconectó	|	2021-12-06 22:57:21.99
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:01:31.959
+
+HiloServidor	:	Se conectó sdsdsdasd	|	2021-12-06 23:01:54.174
+
+HiloServidor	:	Se conectó sadasd	|	2021-12-06 23:02:11.484
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:02:39.139
+
+HiloServidor	:	sdsdsdasd se desconectó	|	2021-12-06 23:02:39.139
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:02:39.729
+
+HiloServidor	:	sadasd se desconectó	|	2021-12-06 23:02:39.729
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:10:35.02
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-06 23:10:59.098
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-06 23:10:59.098
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:12:15.728
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-06 23:12:36.573
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-06 23:12:36.573
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:14:06.018
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-06 23:14:59.568
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-06 23:14:59.568
+
+Cliente	:	java.net.ConnectException: Connection refused: connect	|	2021-12-06 23:15:27.878
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:17:53.921
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-06 23:18:34.838
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-06 23:18:34.998
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:20:19.542
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-06 23:21:12.637
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-06 23:21:12.817
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:28:02.496
+
+Servidor JFrame	:	FirebaseApp name [DEFAULT] already exists!	|	2021-12-06 23:28:30.733
+
+Servidor JFrame	:	Servidor Finalizado	|	2021-12-06 23:28:30.892
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:32:35.586
+
+HiloServidor	:	Se conectó asas	|	2021-12-06 23:32:56.221
+
+HiloServidor	:	Se conectó asasas	|	2021-12-06 23:34:02.806
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:34:08.556
+
+HiloServidor	:	asasas se desconectó	|	2021-12-06 23:34:08.711
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:34:18.891
+
+HiloServidor	:	asas se desconectó	|	2021-12-06 23:34:19.036
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:36:26.666
+
+HiloServidor	:	Se conectó asdsad	|	2021-12-06 23:37:10.175
+
+HiloServidor	:	Se conectó jose	|	2021-12-06 23:37:35.662
+
+HiloServidor	:	Se conectó maria	|	2021-12-06 23:38:03.622
+
+HiloServidor	:	Se conectó pablo	|	2021-12-06 23:40:15.575
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:40:59.855
+
+HiloServidor	:	pablo se desconectó	|	2021-12-06 23:41:00.005
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:41:04.235
+
+HiloServidor	:	asdsad se desconectó	|	2021-12-06 23:41:04.425
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:41:06.485
+
+HiloServidor	:	jose se desconectó	|	2021-12-06 23:41:06.645
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:41:08.716
+
+HiloServidor	:	maria se desconectó	|	2021-12-06 23:41:08.865
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:43:10.745
+
+HiloServidor	:	Se conectó Maria	|	2021-12-06 23:43:34.509
+
+HiloServidor	:	Se conectó Luis	|	2021-12-06 23:43:50.868
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:44:31.81
+
+HiloServidor	:	Luis se desconectó	|	2021-12-06 23:44:31.955
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:44:34.125
+
+HiloServidor	:	Maria se desconectó	|	2021-12-06 23:44:34.28
+
+Servidor JFrame	:	Servidor iniciado	|	2021-12-06 23:45:51.914
+
+HiloServidor	:	Se conectó Marco	|	2021-12-06 23:46:16.228
+
+HiloServidor	:	Se conectó Luis	|	2021-12-06 23:46:26.228
+
+HiloServidor	:	Se conectó Mario	|	2021-12-06 23:46:31.181
+
+HiloServidor	:	Se conectó Alondra	|	2021-12-06 23:47:13.055
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:47:45.389
+
+HiloServidor	:	Alondra se desconectó	|	2021-12-06 23:47:45.529
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:47:54.201
+
+HiloServidor	:	Mario se desconectó	|	2021-12-06 23:47:54.338
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:47:57.776
+
+HiloServidor	:	Luis se desconectó	|	2021-12-06 23:47:57.995
+
+HiloServidor	:	java.net.SocketException: Connection reset	|	2021-12-06 23:48:01.057
+
+HiloServidor	:	Marco se desconectó	|	2021-12-06 23:48:01.192
+
