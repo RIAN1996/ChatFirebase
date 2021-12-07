@@ -16,34 +16,34 @@ import javax.swing.DefaultListModel;
  *
  * @author draw-
  */
-public class HiloCliente extends Thread{
-    
-	private Socket SocketCliente;
-	private DataInputStream entrada;
-	private Cliente cliente;
-	private ObjectInputStream entradaObjeto;
+public class HiloCliente extends Thread {
 
-	private final FileHelper fhelper;
-    
-	public HiloCliente(Socket SocketCliente,Cliente cliente){
-		fhelper = new FileHelper("HiloCliente");
+    private Socket SocketCliente;
+    private DataInputStream entrada;
+    private Cliente cliente;
+    private ObjectInputStream entradaObjeto;
 
-		this.SocketCliente=SocketCliente;
-		this.cliente=cliente;
-	}
-    
-	public void run(){
-		while(true){
-			try{
-				entrada=new DataInputStream(SocketCliente.getInputStream());
+    private final FileHelper fhelper;
 
-				cliente.mensajeria(entrada.readUTF());
-				//cliente.mensajeria2(entrada.readUTF());
-				entradaObjeto=new ObjectInputStream(SocketCliente.getInputStream());
-				cliente.actualizarLista((DefaultListModel)entradaObjeto.readObject());
-			}catch (IOException | ClassNotFoundException ex){
-				fhelper.escribir(ex.toString());
-			}
-		}
-	}
+    public HiloCliente(Socket SocketCliente, Cliente cliente) {
+        fhelper = new FileHelper("HiloCliente");
+
+        this.SocketCliente = SocketCliente;
+        this.cliente = cliente;
+    }
+
+    public void run() {
+        while (true) {
+            try {
+                entrada = new DataInputStream(SocketCliente.getInputStream());
+
+                cliente.mensajeria(entrada.readUTF());
+                //cliente.mensajeria2(entrada.readUTF());
+                entradaObjeto = new ObjectInputStream(SocketCliente.getInputStream());
+                cliente.actualizarLista((DefaultListModel) entradaObjeto.readObject());
+            } catch (IOException | ClassNotFoundException ex) {
+                fhelper.escribir(ex.toString());
+            }
+        }
+    }
 }

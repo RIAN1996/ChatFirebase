@@ -19,49 +19,49 @@ public class Cliente extends javax.swing.JFrame {
     /**
      * Creates new form Cliente
      */
-	private Socket cliente;
-	private final int PUERTOC = 1000;
-	private String host = "localhost";
-	private DataOutputStream salida;
-	private String nombre;
+    private Socket cliente;
+    private final int PUERTOC = 1000;
+    private String host = "localhost";
+    private DataOutputStream salida;
+    private String nombre;
 
-	private FileHelper fhelper;
-    
-	public Cliente() {
-		initComponents();
-		fhelper = new FileHelper("Cliente");
-		try{
-			nombre = JOptionPane.showInputDialog("Su nombre");
-			super.setTitle(super.getTitle() + nombre);
-			super.setVisible(true);
-			cliente = new Socket(host, PUERTOC);
-		
-			fhelper.setSrc("Cliente " + nombre);
-			
-			DataOutputStream salida = new DataOutputStream(cliente.getOutputStream());
-			salida.writeUTF(nombre);
-			HiloCliente hilo = new HiloCliente(cliente, this);
-			hilo.start();
-		}catch(Exception e){
-			JOptionPane.showMessageDialog(this, e.toString());
-			fhelper.escribir(e.toString());
-                        System.out.println("Error"  + e);
-		}
-	}
-    
-	public void mensajeria(String msg){
-		this.jTextArea1.append(" "+msg+"\n");
-	}
-    
-	public void mensajeria2(String msg){
-		String desencryptador="";
-		int ascii=0;
-		for(int i=0;i<msg.length();i++){
-			ascii=msg.charAt(i);
-			desencryptador=desencryptador+(char)(ascii-3);
-		}
-		this.jTextArea1.append(" "+desencryptador+"\n");
-	}
+    private FileHelper fhelper;
+
+    public Cliente() {
+        initComponents();
+        fhelper = new FileHelper("Cliente");
+        try {
+            nombre = JOptionPane.showInputDialog("Su nombre");
+            super.setTitle(super.getTitle() + nombre);
+            super.setVisible(true);
+            cliente = new Socket(host, PUERTOC);
+
+            fhelper.setSrc("Cliente " + nombre);
+
+            DataOutputStream salida = new DataOutputStream(cliente.getOutputStream());
+            salida.writeUTF(nombre);
+            HiloCliente hilo = new HiloCliente(cliente, this);
+            hilo.start();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.toString());
+            fhelper.escribir(e.toString());
+            System.out.println("Error" + e);
+        }
+    }
+
+    public void mensajeria(String msg) {
+        this.jTextArea1.append(" " + msg + "\n");
+    }
+
+    public void mensajeria2(String msg) {
+        String desencryptador = "";
+        int ascii = 0;
+        for (int i = 0; i < msg.length(); i++) {
+            ascii = msg.charAt(i);
+            desencryptador = desencryptador + (char) (ascii - 3);
+        }
+        this.jTextArea1.append(" " + desencryptador + "\n");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -169,29 +169,29 @@ public class Cliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-	public void actualizarLista(DefaultListModel modelo){
-		this.jList1.setModel(modelo);
-	}
-    
+    public void actualizarLista(DefaultListModel modelo) {
+        this.jList1.setModel(modelo);
+    }
+
     private void SalidaEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaEventoActionPerformed
-		try{
-			salida = new DataOutputStream(cliente.getOutputStream());
-			String texto=mensaje.getText();
-      
-			String encryption="";
-			int ascii=0;
-        
-			for(int i=0;i<texto.length();i++){
-				ascii=texto.charAt(i);
-				encryption=encryption+(char) (ascii+3);
-			}
-			System.out.println("texto encriptado:"+encryption);
-			// salida.writeUTF(nombre+":"+this.mensaje.getText());
-			salida.writeUTF(nombre+":"+texto);
-			this.mensaje.setText(" ");
-		}catch(Exception e){
-			fhelper.escribir(e.toString());
-		}
+        try {
+            salida = new DataOutputStream(cliente.getOutputStream());
+            String texto = mensaje.getText();
+
+            String encryption = "";
+            int ascii = 0;
+
+            for (int i = 0; i < texto.length(); i++) {
+                ascii = texto.charAt(i);
+                encryption = encryption + (char) (ascii + 3);
+            }
+            System.out.println("texto encriptado:" + encryption);
+            // salida.writeUTF(nombre+":"+this.mensaje.getText());
+            salida.writeUTF(nombre + ":" + texto);
+            this.mensaje.setText(" ");
+        } catch (Exception e) {
+            fhelper.escribir(e.toString());
+        }
     }//GEN-LAST:event_SalidaEventoActionPerformed
 
     /**

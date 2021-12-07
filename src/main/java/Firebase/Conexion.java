@@ -17,10 +17,10 @@ public class Conexion {
 
     private static Firestore bd;
 
-    public  void conectar() throws IOException {
+    public void conectar() throws IOException {
 
-        FileInputStream serviceAccount =
-                new FileInputStream("serviceAccountKey.json");
+        FileInputStream serviceAccount
+                = new FileInputStream("serviceAccountKey.json");
         FirebaseOptions options = new FirebaseOptions.Builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
                 .build();
@@ -31,12 +31,11 @@ public class Conexion {
         System.out.println("La conexeion se ralizo correctmanete...!");
     }
 
-    public   boolean add (
-           
+    public boolean add(
             String coleccion,
             String documento,
-            Map<String,Object> data){
-        
+            Map<String, Object> data) {
+
         try {
             DocumentReference docRef = bd.collection(coleccion).document(documento);
             ApiFuture<WriteResult> result = docRef.set(data);
@@ -52,6 +51,5 @@ public class Conexion {
         }
         return false;
     }
-    
 
 }

@@ -14,7 +14,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author x230
@@ -25,37 +24,42 @@ public class Servidor extends javax.swing.JFrame {
      * Creates new form Servidor
      */
     private ServerSocket server;
-    private final int PUERTOH=1000;
+    private final int PUERTOH = 1000;
     private static Conexion fireBase = new Conexion();
     private FileHelper fhelper;
-    
+
     public Servidor() {
-		initComponents();
+        initComponents();
+        fhelper = new FileHelper("Servidor JFrame");
+        this.fhelper.escribir("Servidor iniciado");
 
-		fhelper = new FileHelper("Servidor JFrame");
-		
-		this.fhelper.escribir("Servidor iniciado");
-		
-		try{
-			server = new ServerSocket(PUERTOH);
-			mensajeria("*.:Servidor Conectado:.\n");
-			super.setVisible(true);
+        try {
+            server = new ServerSocket(PUERTOH);
+            mensajeria("*.:Servidor Conectado:.\n");
+            super.setVisible(true);
 
-			while(true){
-				Socket cliente = server.accept();
-				mensajeria("Cliente conectado desde la dirección: "+cliente.getInetAddress().getHostAddress());
+            while (true) {
+                Socket cliente = server.accept();
+                mensajeria("Cliente conectado desde la dirección: " + cliente.getInetAddress().getHostAddress());
 
-				DataInputStream entrada = new DataInputStream(cliente.getInputStream());
+                DataInputStream entrada = new DataInputStream(cliente.getInputStream());
 
-				HiloServidor hilo = new HiloServidor(cliente, entrada.readUTF(), this);
-				hilo.start();
-			}
-		}catch(Exception e){
-			JOptionPane.showMessageDialog(this, e.toString());
-			fhelper.escribir(e.getMessage());
-		}
-		
-		fhelper.escribir("Servidor Finalizado");
+                HiloServidor hilo = new HiloServidor(cliente, entrada.readUTF(), this);
+                hilo.start();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.toString());
+            fhelper.escribir(e.getMessage());
+        }
+
+        try {
+            fireBase.conectar();
+            System.out.println("Conectado...");
+        } catch (IOException ex) {
+            Logger.getLogger(FileHelper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        fhelper.escribir("Servidor Finalizado");
     }
 
     /**
@@ -125,13 +129,6 @@ public class Servidor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        try {
-            fireBase.conectar();
-            System.out.println("Conectado...");
-        } catch (IOException ex) {
-            Logger.getLogger(FileHelper.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Servidor().setVisible(true);
@@ -145,24 +142,24 @@ public class Servidor extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     void mensajeria(String msg) {
-       this.jTextArea1.append(" "+msg+"\n");
+        this.jTextArea1.append(" " + msg + "\n");
     }
-    
+
     void mensajeria2(String msg) {
-         String desencryptador="";
-			int ascii=0;
-			int code_text=0;
-			for(int i=0;i<msg.length();i++){
-				if(code_text==1){
-					ascii=msg.charAt(i);
-					desencryptador=desencryptador+(char)(ascii-3);
-				}else{
-					ascii=msg.charAt(i);
-				}
-				if(msg.charAt(i)==':'){
-					code_text=1;
-				}
-			}
-       this.jTextArea1.append(" "+desencryptador+"\n");
+        String desencryptador = "";
+        int ascii = 0;
+        int code_text = 0;
+        for (int i = 0; i < msg.length(); i++) {
+            if (code_text == 1) {
+                ascii = msg.charAt(i);
+                desencryptador = desencryptador + (char) (ascii - 3);
+            } else {
+                ascii = msg.charAt(i);
+            }
+            if (msg.charAt(i) == ':') {
+                code_text = 1;
+            }
+        }
+        this.jTextArea1.append(" " + desencryptador + "\n");
     }
 }
